@@ -3,20 +3,12 @@ import { FiEdit3, FiTrash } from "react-icons/fi";
 
 import { Container } from "./styles";
 import api from "../../services/api";
-
-interface Food {
-  available: boolean;
-  description: string;
-  id: number;
-  image: string;
-  name: string;
-  price: string;
-}
+import { FoodInterface } from "../../types";
 
 interface FoodProps {
-  food: Food;
+  food: FoodInterface;
   handleDelete: (id: number) => void;
-  handleEditFood: (food: Food) => void;
+  handleEditFood: (food: FoodInterface) => void;
 }
 
 export function Food({ food, handleDelete, handleEditFood }: FoodProps) {
